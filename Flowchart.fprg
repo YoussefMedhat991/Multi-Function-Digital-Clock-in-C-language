@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Mazaya"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-05-07 01:17:06 AM"/>
+        <attribute name="created" value="TWF6YXlhO1lPVVNTRUY7MjAyMy0wNS0wNjswODo0MToyNCBQTTsyNDUw"/>
+        <attribute name="edited" value="TWF6YXlhO1lPVVNTRUY7MjAyMy0wNS0wNzswMToxNzowNiBBTTsxOzI1NDA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Declaretion of variables&quot;" newline="True"/>
+            <output expression="&quot;Display the choices &#13;&#10;1-DIGITAL CLOCK&#13;&#10;2-TIMER&#13;&#10;3-STOPWATCH&#13;&#10;any EXIT&quot;" newline="True"/>
+            <if expression="Choice = DigitalClock">
+                <then>
+                    <output expression="&quot;The user will be asked if he wants to take the time automatically or to type it manually&quot;" newline="True"/>
+                    <if expression="Choice = Automatically">
+                        <then>
+                            <output expression="&quot;The user will be asked about the desired timezone&quot;" newline="True"/>
+                            <output expression="&quot;The user will be asked about the desired time format.&#13;&#10;(12-hour or 24-hour) format&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;The user will be asked to insert the time manually&quot;" newline="True"/>
+                        </else>
+                    </if>
+                    <output expression="&quot;The user will be asked about the desired date format.&#13;&#10;(long date or short date)&quot;" newline="True"/>
+                    <while expression="While">
+                        <output expression="&quot;The clock will be displayed in the desired time and date format , and the loop will never ends&#13;&#10;Example for output:(HH:MM:SS&#13;&#10;Day, DD month YYYY)&quot;" newline="True"/>
+                    </while>
+                </then>
+                <else>
+                    <if expression="Choice = Stopwatch">
+                        <then>
+                            <output expression="&quot;The user will be asked if he wants to add a stoppage time&quot;" newline="True"/>
+                            <if expression="Choice = StoppageTime">
+                                <then>
+                                    <output expression="&quot;The user will be asked to insert the stoppage time&quot;" newline="True"/>
+                                    <while expression="While">
+                                        <output expression="&quot;The time will stop at the inserted time and the loop will be ended&quot;" newline="True"/>
+                                    </while>
+                                </then>
+                                <else>
+                                    <while expression="While">
+                                        <output expression="&quot;The time and the loop will never ends until the user stops the program&quot;" newline="True"/>
+                                    </while>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <if expression="Choice = Timer">
+                                <then>
+                                    <output expression="&quot;The use will be asked to insert the desired timer&quot;" newline="True"/>
+                                    <while expression="While">
+                                        <output expression="&quot;The countdown will start from the inserted time and the loop will be ended at zero time&quot;" newline="True"/>
+                                    </while>
+                                </then>
+                                <else>
+                                    <output expression="&quot;EXIT&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
